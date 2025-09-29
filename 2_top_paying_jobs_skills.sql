@@ -44,3 +44,22 @@ INNER JOIN skills_dim
 
 ORDER BY
     salary_year_avg DESC
+
+
+/*
+
+Most frequent skills:
+
+SQL → 8 mentions
+
+Python → 7 mentions
+
+Tableau → 6 mentions
+
+R → 4 mentions
+
+Snowflake, Pandas, Excel → 3 mentions each
+
+Emerging/less frequent but valuable: Azure, Bitbucket, Go (2 mentions each).
+
+*/
