@@ -62,4 +62,17 @@ Snowflake, Pandas, Excel → 3 mentions each
 
 Emerging/less frequent but valuable: Azure, Bitbucket, Go (2 mentions each).
 
+
+////////////////////////////////////
+
+Trends
+
+Data-centric skills dominate: SQL, Python, R, Pandas, and Tableau highlight a strong emphasis on data analysis, data science, and visualization.
+
+Cloud & Big Data tools: Snowflake, Azure, and Databricks show demand for cloud-based data infrastructure expertise.
+
+Programming versatility: Python and R are both prominent—Python slightly more dominant, signaling its wider adoption in industry.
+
+Business + Tech balance: Excel still ranks high, reflecting the continuing importance of business-friendly tools alongside advanced technologies.
+
 */

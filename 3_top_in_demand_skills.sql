@@ -35,3 +35,34 @@ ORDER BY
     demand_count DESC
 
 LIMIT 5
+
+
+/*
+
+SQL → 92,628 postings
+
+Excel → 67,031 postings
+
+Python → 57,326 postings
+
+Tableau → 46,554 postings
+
+Power BI → 39,468 postings
+
+
+
+///////////////////////////////////////////
+
+
+SQL is #1: Still the backbone of data management and analysis, appearing in the highest number of postings.
+
+Excel remains crucial: Despite more advanced tools, Excel is indispensable for business operations and reporting.
+
+Python rising strong: Dominates for programming, automation, and data science.
+
+Visualization is key: Tableau and Power BI show employers value professionals who can communicate data insights effectively.
+
+Business + Tech combo: The mix of Excel (business-oriented) with Python/SQL (technical) highlights a demand for hybrid skill sets.
+
+
+*/
