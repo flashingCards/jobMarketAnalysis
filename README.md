@@ -34,23 +34,16 @@ salaries?
 For my deep dive into the data analyst job market,
 I harnessed the power of several key tools:
 
-- **SQL**: The backbone of my analysis, allowing me to
-query the database and unearth critical insights.
-- **PostgreSQL**: The chosen database management
-system, ideal for handling the job posting data.
-- **Visual Studio Code**: My go-tq for database
-management and executing SQL queries.
+- **SQL**: The backbone of my analysis, allowing me to query the database and unearth critical insights.
+- **PostgreSQL**: The chosen database management system, ideal for handling the job posting data.
+- **Visual Studio Code**: My go-tq for database management and executing SQL queries.
 
-- **Git & GitHub**: Essential for version control and
-sharing my SQL scripts and analysis, ensuring
-collaboration and project tracking.
+- **Git & GitHub**: Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
 
 
 # The Analysis
 
-Each query for this project aimed at investigating
-specific aspects of the data analyst job market.
-Here's how I approached each question:
+Each query for this project aimed at investigating specific aspects of the data analyst job market. Here's how I approached each question:
 
 ### 1. Top Paying Data Analyst Jobs
 
@@ -85,19 +78,13 @@ LIMIT 10
 ```
 
 Here's the breakdown of the top data analyst jobs in 2023:
-- **Wide Salary Range:** Top 10 paying data |
-analyst roles span from $184,000 to $650,000, |
-indicating significant salary potential in the
-field. |
+- **Wide Salary Range:** Top 10 paying data analyst roles span from $184,000 to $650,000, indicating significant salary potential in the field.
 - **Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salagies, showing a broad interest across different industries.
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
-![topPayingJobs](/aProject/first/images/1_top_paying_jobs.png)
+![topPayingJobs](/images/1_top_paying_jobs.png)
 *Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results 1
 
-
-
-/////
 
 
 ### 2. Top Paying Data Analyst Jobs Skills
@@ -154,10 +141,7 @@ Programming versatility: Python and R are both prominent—Python slightly more 
 
 Business + Tech balance: Excel still ranks high, reflecting the continuing importance of business-friendly tools alongside advanced technologies.
 
-![topPayingJobs](/aProject/first/images/2_top_paying_job_skills.png)
-
-
-/////
+![topPayingJobs](/images/2_top_paying_job_skills.png)
 
 
 ### 3. Top In Demand Skills
@@ -242,4 +226,10 @@ LIMIT 100
 
 # What I Learned
 
-# Conclusions
+Throughout this adventure, I've turbocharged my SQL toolkit with some serious firepower:
+
+- **Complex Query Crafting:** Mastered the art of advanced SQL, merging tables like a pro and wielding WITH clauses for ninja-level temp table maneuvers.
+
+- **Data Aggregation:** Got cozy with GROUP BY and turned aggregate functions like COUNT() and AVG () into my data-summarizing sidekicks.
+
+- **Analytical Wizardry:** Leveled up my real-world puzzle-solving skills, turning questions into actionable, insightful SQL queries.
