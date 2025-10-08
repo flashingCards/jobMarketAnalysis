@@ -201,7 +201,7 @@ Visualization is key: Tableau and Power BI show employers value professionals wh
 Business + Tech combo: The mix of Excel (business-oriented) with Python/SQL (technical) highlights a demand for hybrid skill sets.
 
 
-![topPayingJobs](/aProject/first/images/3_top_in_demand_skills.png)
+![topPayingJobs](/images/3_top_in_demand_skills.png)
 
 
 
@@ -236,7 +236,7 @@ LIMIT 100
 ```
 
 
-![topPayingJobs](/aProject/first/images/4_top_paying_skills.png)
+![topPayingJobs](/images/4_top_paying_skills.png)
 
 
 
