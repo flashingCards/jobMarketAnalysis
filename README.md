@@ -5,7 +5,7 @@ analyst roles, this project explores & top-paying
 jobs, & in-demand skills, and Mi where high
 demand meets high salary in data analytics.
 
-SQL queries? Check them out here: [queries](/aProject/first/queries/)
+SQL queries? Check them out here: [queries](/queries/)
 
 # Background
 
