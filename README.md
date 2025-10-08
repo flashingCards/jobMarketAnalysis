@@ -92,6 +92,154 @@ field. |
 - **Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salagies, showing a broad interest across different industries.
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
+![topPayingJobs](/aProject/first/images/1_top_paying_jobs.png)
+*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results 1
+
+
+
+/////
+
+
+### 2. Top Paying Data Analyst Jobs Skills
+
+``` sql
+
+WITH top_paying_jobs AS (
+
+    SELECT
+        job_id,
+        job_title,
+        salary_year_avg,
+        name AS company_name
+
+    FROM
+        job_postings_fact
+
+    LEFT JOIN company_dim -- joining to company_dim table to get
+        ON job_postings_fact.company_id = company_dim.company_id
+
+    WHERE
+        job_title_short = 'Data Analyst'
+        AND job_location = 'Anywhere'
+        AND salary_year_avg IS NOT NULL
+
+    ORDER BY salary_year_avg DESC
+
+    LIMIT 10
+)
+
+SELECT
+    top_paying_jobs.*,
+    skills
+
+FROM top_paying_jobs
+
+INNER JOIN skills_job_dim
+    ON top_paying_jobs.job_id = skills_job_dim.job_id
+
+INNER JOIN skills_dim
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+
+ORDER BY
+    salary_year_avg DESC
+
+
+```
+
+Data-centric skills dominate: SQL, Python, R, Pandas, and Tableau highlight a strong emphasis on data analysis, data science, and visualization.
+
+Cloud & Big Data tools: Snowflake, Azure, and Databricks show demand for cloud-based data infrastructure expertise.
+
+Programming versatility: Python and R are both prominent—Python slightly more dominant, signaling its wider adoption in industry.
+
+Business + Tech balance: Excel still ranks high, reflecting the continuing importance of business-friendly tools alongside advanced technologies.
+
+![topPayingJobs](/aProject/first/images/2_top_paying_job_skills.png)
+
+
+/////
+
+
+### 3. Top In Demand Skills
+
+``` sql
+SELECT
+    skills,
+    COUNT(skills_job_dim) AS demand_count
+
+FROM job_postings_fact
+
+INNER JOIN skills_job_dim
+    ON job_postings_fact.job_id = skills_job_dim.job_id
+
+INNER JOIN skills_dim
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+
+WHERE
+    job_title_short = 'Data Analyst'
+
+GROUP BY
+    skills
+
+ORDER BY
+    demand_count DESC
+
+LIMIT 5
+
+
+
+```
+
+SQL is #1: Still the backbone of data management and analysis, appearing in the highest number of postings.
+
+Excel remains crucial: Despite more advanced tools, Excel is indispensable for business operations and reporting.
+
+Python rising strong: Dominates for programming, automation, and data science.
+
+Visualization is key: Tableau and Power BI show employers value professionals who can communicate data insights effectively.
+
+Business + Tech combo: The mix of Excel (business-oriented) with Python/SQL (technical) highlights a demand for hybrid skill sets.
+
+
+![topPayingJobs](/aProject/first/images/3_top_in_demand_skills.png)
+
+
+
+### 4. Top In Paying Skills
+
+``` sql
+
+SELECT
+    skills,
+    ROUND(AVG(salary_year_avg), 0) AS average_salary
+
+FROM job_postings_fact
+
+INNER JOIN skills_job_dim
+    ON job_postings_fact.job_id = skills_job_dim.job_id
+
+INNER JOIN skills_dim
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+
+WHERE
+    job_title_short = 'Data Analyst'
+    AND salary_year_avg IS NOT NULL
+
+GROUP BY
+    skills
+
+ORDER BY
+     average_salary DESC
+
+LIMIT 100
+
+```
+
+
+![topPayingJobs](/aProject/first/images/4_top_paying_skills.png)
+
+
+
 # What I Learned
 
 # Conclusions
